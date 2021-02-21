@@ -10,20 +10,20 @@ import (
 )
 
 var chara = &gacha.Character{
-	cn : []string{"", "", ""},
-	cr : []string{"", "", ""},
-	csr : []string{"", "", ""},
-	cxr : []string{"", "", ""},
+	CharacterN:  []string{"スライム", "ゴブリン", "コボルト"},
+	CharacterR:  []string{"オーク", "オーク2", "オーク3"},
+	CharacterSR: []string{"ドラゴン", "フェンリル", "巨人"},
+	CharacterXR: []string{"イフリート", "ゼウス", "アテナ"},
 }
 
 func main() {
 	p := gacha.NewPlayer(10, 100)
-
-
 	n := inputN(p)
 	results, summary := gacha.DrawN(p, n, chara)
 
-	fmt.Println(results)
+	for _, v := range results {
+		fmt.Println(v)
+	}
 	fmt.Println(summary)
 }
 

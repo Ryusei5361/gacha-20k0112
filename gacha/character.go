@@ -5,4 +5,4 @@ type Character struct {
 	CharacterR  []string
 	CharacterSR []string
 	CharacterXR []string
-	}
+}

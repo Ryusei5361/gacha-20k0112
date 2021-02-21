@@ -27,7 +27,7 @@ func DrawN(p *Player, n int, c *Character) ([]*Card, map[Rarity]int) {
 
 func draw(c *Character) *Card {
 	rarity := drawrare()
-	name   := drawchara(c)
+	name := drawchara(c)
 	return &Card{Rarity: rarity, Name: name}
 }
 
@@ -47,22 +47,22 @@ func drawrare() Rarity {
 
 func drawchara(c *Character) string {
 	chara := drawrare()
-	if chara == RarityN {
-		n := len(c.characterN)
+	switch chara {
+	case RarityN:
+		n := len(c.CharacterN)
 		num := rand.Intn(n)
-		return c.characterN[num]
-	} else if chara == RarityR {
-		n := len(c.characterR)
+		return c.CharacterN[num]
+	case RarityR:
+		n := len(c.CharacterR)
 		num := rand.Intn(n)
-		return c.characterR[num]
-	} else if chara == RaritySR {
-		n := len(c.characterSR)
+		return c.CharacterR[num]
+	case RaritySR:
+		n := len(c.CharacterSR)
 		num := rand.Intn(n)
-		return c.characterSR[num]
-	} else {
-		n := len(c.characterXR)
+		return c.CharacterSR[num]
+	default:
+		n := len(c.CharacterXR)
 		num := rand.Intn(n)
-		return c.characterXR[num]
+		return c.CharacterXR[num]
 	}
-
 }
