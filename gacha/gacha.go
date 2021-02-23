@@ -13,24 +13,24 @@ func init() {
 
 func DrawN(p *Player, n int, c *Character) ([]*Card, map[Rarity]int) {
 	p.draw(n)
-
 	results := make([]*Card, n)
 	summary := make(map[Rarity]int)
 	for i := 0; i < n; i++ {
 		results[i] = draw(c)
 		summary[results[i].Rarity]++
 	}
-
 	// 変数resultsとsummaryの値を戻り値として返す
 	return results, summary
 }
 
+//カードを作成
 func draw(c *Character) *Card {
 	rarity := drawrare()
 	name := drawchara(c)
 	return &Card{Rarity: rarity, Name: name}
 }
 
+//レア度の抽選
 func drawrare() Rarity {
 	num := rand.Intn(100)
 	switch {
@@ -45,6 +45,7 @@ func drawrare() Rarity {
 	}
 }
 
+//キャラの抽選
 func drawchara(c *Character) string {
 	chara := drawrare()
 	switch chara {

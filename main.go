@@ -6,6 +6,7 @@ import (
 	"github.com/Ryusei5361/gacha-20k0112/gacha"
 )
 
+//キャラを作成
 var chara = &gacha.Character{
 	CharacterN:  []string{"スライム", "ゴブリン", "コボルト"},
 	CharacterR:  []string{"オーク", "ゴブリンソルジャー", "妖精"},
@@ -25,10 +26,9 @@ func main() {
 }
 
 func inputN(p *gacha.Player) int {
-
 	max := p.DrawableNum()
 	fmt.Printf("ガチャを引く回数を入力してください（最大:%d回）\n", max)
-
+	
 	var n int
 	for {
 		fmt.Print("ガチャを引く回数>")
@@ -38,6 +38,5 @@ func inputN(p *gacha.Player) int {
 		}
 		fmt.Printf("1以上%d以下の数を入力してください\n", max)
 	}
-
 	return n
 }
