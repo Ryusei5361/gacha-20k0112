@@ -8,7 +8,7 @@ import (
 
 var chara = &gacha.Character{
 	CharacterN:  []string{"スライム", "ゴブリン", "コボルト"},
-	CharacterR:  []string{"オーク", "オーク2", "オーク3"},
+	CharacterR:  []string{"オーク", "ゴブリンソルジャー", "妖精"},
 	CharacterSR: []string{"ドラゴン", "フェンリル", "巨人"},
 	CharacterXR: []string{"イフリート", "ゼウス", "アテナ"},
 }
