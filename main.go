@@ -28,7 +28,7 @@ func main() {
 func inputN(p *gacha.Player) int {
 	max := p.DrawableNum()
 	fmt.Printf("ガチャを引く回数を入力してください（最大:%d回）\n", max)
-	
+
 	var n int
 	for {
 		fmt.Print("ガチャを引く回数>")
