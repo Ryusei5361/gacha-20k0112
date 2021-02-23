@@ -1,11 +1,8 @@
-// STEP03: gachaパッケージ公開しよう
-
 package main
 
 import (
 	"fmt"
 
-	// TODO: インポートパスを公開したものに変更する
 	"github.com/Ryusei5361/gacha-20k0112/gacha"
 )
 
